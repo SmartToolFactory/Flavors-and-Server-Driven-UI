@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -26,7 +29,6 @@ android {
     // Specifies one flavor dimension.
     flavorDimensions "version"
     productFlavors {
-
 
         free {
             // Assigns this product flavor to the "version" flavor dimension.
@@ -68,15 +70,56 @@ android {
 
 dependencies {
 
+    // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    // Core for extension functions
+    implementation 'androidx.core:core-ktx:1.3.2'
+
+    // Support, Material and Components
+    implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+
+    // ConstraintLayout
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+
+    // ViewPager2
+    implementation "androidx.viewpager2:viewpager2:$rootProject.viewPager2Version"
+
+    // Material
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    //RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
+    implementation "androidx.navigation:navigation-runtime-ktx:$rootProject.navigationVersion"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$rootProject.navigationVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    // glide
+    implementation("com.github.bumptech.glide:glide:$rootProject.glideVersion")
+    kapt("com.github.bumptech.glide:compiler:$rootProject.glideVersion")
+
+    // Compose
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
+
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-beta01'
 
     testImplementation 'junit:junit:4.+'
