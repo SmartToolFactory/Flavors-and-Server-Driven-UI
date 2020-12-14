@@ -17,11 +17,21 @@
         tool:background="#0f0"
         tool:layout_height="100dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/containerContent"
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/containerContent"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:background="#f00"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/containerBottom"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/containerTop" />-->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:background="#f00"
         android:layout_height="0dp"
+        android:background="#f00"
         app:layout_constraintBottom_toTopOf="@id/containerBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

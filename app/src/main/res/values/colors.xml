@@ -13,4 +13,8 @@
     <color name="splash_background">#9CCC65</color>
     <color name="main_background">#DCEDC8</color>
     <color name="text_color">#FF000000</color>
+
+    <color name="chats_background">#7B1FA2</color>
+    <color name="contacts_background">#9C27B0</color>
+    <color name="calls_background">#BA68C8</color>
 </resources>

@@ -30,7 +30,6 @@ class SplashFragment : Fragment() {
 
         val config = requireActivity().application.assets.readAssetsFile("config/config.json")
 
-
         lifecycleScope.launch(Dispatchers.Main) {
             delay(2000)
             findNavController().navigate(R.id.action_global_mainFragment)
