@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class Config(
 
     @SerializedName("version") val version: Int,
+    @SerializedName("logo") val logo: String,
     @SerializedName("navigation_type") val navigationType: Int = NAVIGATION_TOOLBAR,
     @SerializedName("colors") val colors: Colors,
     @SerializedName("features") val features: Features
