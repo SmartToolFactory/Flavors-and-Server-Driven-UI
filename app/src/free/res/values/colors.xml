@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#A5D6A7</color>
-    <color name="purple_500">#4CAF50</color>
-    <color name="purple_700">#388E3C</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="colorPrimaryDark">#FF3700B3</color>
+    <color name="colorAccent">#FF03DAC5</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <!-- Flavor Specific Colors -->
     <color name="background">#FFFFFFFF</color>
     <color name="splash_background">#9CCC65</color>
-    <color name="main_background">#DCEDC8</color>
+    <color name="login_background">#DCEDC8</color>
+
+    <!-- Text Colors -->
     <color name="text_color">#FF000000</color>
 
-    <color name="chats_background">#8BC34A</color>
-    <color name="contacts_background">#AED581</color>
-    <color name="calls_background">#C5E1A5</color>
+    <!-- BottomNavigation/Toolbar/Navigation View Colors -->
+    <color name="nav_tab_icon_color">#FFD54F</color>
+    <color name="nav_tab_icon_color_selected">#F5F5F5</color>
+
+    <color name="chats_background">#757575</color>
+    <color name="contacts_background">#757575</color>
+    <color name="calls_background">#757575</color>
 </resources>

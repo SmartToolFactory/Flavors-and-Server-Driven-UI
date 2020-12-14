@@ -4,8 +4,7 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:id="@+id/containerMainRoot"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/main_background">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerTop"
@@ -16,16 +15,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tool:background="#0f0"
         tool:layout_height="100dp" />
-
-    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-    <!--        android:id="@+id/containerContent"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        android:background="#f00"-->
-    <!--        app:layout_constraintBottom_toTopOf="@id/containerBottom"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/containerTop" />-->
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"

@@ -18,12 +18,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:tabIconTint="#F57C00"
-        app:tabIndicatorColor="#F57C00"
+        app:tabIconTint="@color/nav_tab_icon_color"
+        app:tabIndicatorColor="@color/nav_tab_icon_color"
         app:tabIndicatorHeight="4dp"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="#F5F5F5"
-        app:tabTextColor="#FFE0B2" />
+        app:tabSelectedTextColor="@color/nav_tab_icon_color_selected"
+        app:tabTextColor="@color/nav_tab_icon_color_selected" />
 
 
 </com.google.android.material.appbar.AppBarLayout>

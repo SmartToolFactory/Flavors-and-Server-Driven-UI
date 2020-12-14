@@ -1,3 +1,28 @@
 {
+  "version": 1,
+  "navigation_type": "1",
+  "colors": {
 
+    "colorPrimaryDark": "#FF6200EE",
+    "colorPrimary": "#FF3700B3",
+    "colorAccent": "#FF03DAC5",
+    "background": "#FFFFFFFF",
+    "splash_background": "#9CCC65",
+    "login_background": "#DCEDC8",
+    "text_color": "FF000000",
+    "chats_background": "#757575",
+    "contacts_background": "#757575",
+    "calls_background": "#757575",
+    "nav_tab_icon_color": "#FFD54F",
+    "nav_tab_icon_color_selected": "#F5F5F5"
+  },
+  "features": {
+    "feature_require_login": false,
+    "feature_chat": true,
+    "feature_contacts": true,
+    "feature_call": true,
+    "feature_call_dial_pad": true,
+    "feature_conference": true,
+    "feature_settings": true
+  }
 }
