@@ -1,4 +1,4 @@
-package com.smarttoolfactory.flavorsandserverdrivenui.ui
+package com.smarttoolfactory.flavorsandserverdrivenui.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.smarttoolfactory.flavorsandserverdrivenui.MyApplication
 import com.smarttoolfactory.flavorsandserverdrivenui.R
 
-class CallsFragment : Fragment() {
+class ContactsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,19 +17,18 @@ class CallsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_calls, container, false)
+        val view = inflater.inflate(R.layout.fragment_contacts, container, false)
 
         val colorMap = MyApplication.configManager.colorMap
 
-        colorMap["callsBackground"]?.let {
+        colorMap["contactsBackground"]?.let {
             view.rootView.setBackgroundColor(it)
         }
 
         colorMap["textColor"]?.let {
-            view.findViewById<TextView>(R.id.tvCalls).setTextColor(it)
+            view.findViewById<TextView>(R.id.tvContacts).setTextColor(it)
         }
 
         return view
     }
-
 }

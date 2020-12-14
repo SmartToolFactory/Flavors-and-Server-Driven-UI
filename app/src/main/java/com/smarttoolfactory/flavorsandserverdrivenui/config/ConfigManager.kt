@@ -2,14 +2,11 @@ package com.smarttoolfactory.flavorsandserverdrivenui.config
 
 import android.content.Context
 import android.content.res.AssetManager
-import android.graphics.Color
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.toColorInt
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.smarttoolfactory.flavorsandserverdrivenui.R
-import org.json.JSONException
-import org.json.JSONObject
 
 /**
  * Color, theme, style management class based on config file retrieved from remote data source
@@ -18,7 +15,7 @@ import org.json.JSONObject
  */
 class ConfigManager(private val context: Context) {
 
-    var config: Config? = null
+    lateinit var config: Config
 
     val colorMap by lazy {
         HashMap<String, Int>()
@@ -31,32 +28,30 @@ class ConfigManager(private val context: Context) {
             .assets
             .readAssetsFile("config/config.json")
 
-        config = convertToObjectsFromString<Config>(resource)
+        config = convertToObjectsFromString<Config>(resource) ?: DEFAULT_CONFIG
 
-        config?.colors?.let {
+        config.colors.let {
             parseColors(it)
         }
-
-        println()
     }
 
     // TODO Parse colors with Efficient way, this is temporary
     private fun parseColors(colors: Colors) {
-        config?.run {
+        config.run {
 
             /*
-                    "colorPrimaryDark": "#FF6200EE",
-                    "colorPrimary": "#FF3700B3",
-                    "colorAccent": "#FF03DAC5",
-                    "splash_background": "#9CCC65",
-                    "main_background": "#DCEDC8",
-                    "text_color": "FF000000",
-                    "chats_background": "#757575",
-                    "contacts_background": "#757575",
-                    "calls_background": "#757575",
-                    "nav_tab_icon_color": "#FFD54F",
-                    "nav_tab_icon_color_selected": "#F5F5F5"
-             */
+                        "colorPrimaryDark": "#FF6200EE",
+                        "colorPrimary": "#FF3700B3",
+                        "colorAccent": "#FF03DAC5",
+                        "splash_background": "#9CCC65",
+                        "main_background": "#DCEDC8",
+                        "text_color": "FF000000",
+                        "chats_background": "#757575",
+                        "contacts_background": "#757575",
+                        "calls_background": "#757575",
+                        "nav_tab_icon_color": "#FFD54F",
+                        "nav_tab_icon_color_selected": "#F5F5F5"
+                 */
 
             colorMap["colorPrimaryDark"] = try {
                 colors.colorPrimaryDark.toColorInt()
@@ -129,7 +124,6 @@ class ConfigManager(private val context: Context) {
                 )
             }
         }
-
     }
 }
 

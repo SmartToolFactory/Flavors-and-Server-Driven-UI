@@ -1,4 +1,4 @@
-package com.smarttoolfactory.flavorsandserverdrivenui.ui
+package com.smarttoolfactory.flavorsandserverdrivenui.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

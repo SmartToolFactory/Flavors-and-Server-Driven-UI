@@ -16,7 +16,7 @@
     "nav_tab_icon_color_selected": "#EF6C00"
   },
   "features": {
-    "feature_require_login": false,
+    "feature_require_login": true,
     "feature_chat": true,
     "feature_contacts": true,
     "feature_call": true,
