@@ -1,4 +1,4 @@
-package com.smarttoolfactory.flavorsandserverdrivenui
+package com.smarttoolfactory.flavorsandserverdrivenui.ui
 
 import androidx.fragment.app.Fragment
 

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Color
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.toColorInt
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.smarttoolfactory.flavorsandserverdrivenui.R
@@ -47,7 +48,6 @@ class ConfigManager(private val context: Context) {
                     "colorPrimaryDark": "#FF6200EE",
                     "colorPrimary": "#FF3700B3",
                     "colorAccent": "#FF03DAC5",
-                    "background": "#FFFFFFFF",
                     "splash_background": "#9CCC65",
                     "main_background": "#DCEDC8",
                     "text_color": "FF000000",
@@ -59,73 +59,68 @@ class ConfigManager(private val context: Context) {
              */
 
             colorMap["colorPrimaryDark"] = try {
-                Color.parseColor(colors.colorPrimaryDark)
+                colors.colorPrimaryDark.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.colorPrimaryDark, null)
             }
 
             colorMap["colorPrimary"] = try {
-                Color.parseColor(colors.colorPrimary)
+                colors.colorPrimary.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.colorPrimary, null)
             }
 
             colorMap["colorAccent"] = try {
-                Color.parseColor(colors.colorAccent)
+                colors.colorAccent.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.colorAccent, null)
             }
 
-            colorMap["background"] = try {
-                Color.parseColor(colors.background)
-            } catch (e: Exception) {
-                ResourcesCompat.getColor(context.resources, R.color.background, null)
-            }
 
             colorMap["splashBackground"] = try {
-                Color.parseColor(colors.splashBackground)
+                colors.splashBackground.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.splash_background, null)
             }
 
             colorMap["loginBackground"] = try {
-                Color.parseColor(colors.loginBackground)
+                colors.loginBackground.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.login_background, null)
             }
 
             colorMap["textColor"] = try {
-                Color.parseColor(colors.textColor)
+                colors.textColor.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.text_color, null)
             }
 
             colorMap["chatsBackground"] = try {
-                Color.parseColor(colors.chatsBackground)
+                colors.chatsBackground.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.chats_background, null)
             }
 
             colorMap["contactsBackground"] = try {
-                Color.parseColor(colors.contactsBackground)
+                colors.contactsBackground.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.contacts_background, null)
             }
 
             colorMap["callsBackground"] = try {
-                Color.parseColor(colors.callsBackground)
+                colors.callsBackground.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.calls_background, null)
             }
 
             colorMap["navTabIconColor"] = try {
-                Color.parseColor(colors.navTabIconColor)
+                colors.navTabIconColor.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.nav_tab_icon_color, null)
             }
 
             colorMap["navTabIconColorSelected"] = try {
-                Color.parseColor(colors.navTabIconColorSelected)
+                colors.navTabIconColorSelected.toColorInt()
             } catch (e: Exception) {
                 ResourcesCompat.getColor(
                     context.resources,
@@ -135,21 +130,6 @@ class ConfigManager(private val context: Context) {
             }
         }
 
-    }
-
-
-    @Throws(JSONException::class)
-    fun jsonToMap(t: String?) {
-        val map = HashMap<String, String>()
-        val jObject = JSONObject(t)
-        val keys: Iterator<*> = jObject.keys()
-        while (keys.hasNext()) {
-            val key = keys.next() as String
-            val value = jObject.getString(key)
-            map[key] = value
-        }
-        println("json : $jObject")
-        println("map : $map")
     }
 }
 

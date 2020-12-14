@@ -1,4 +1,4 @@
-package com.smarttoolfactory.flavorsandserverdrivenui
+package com.smarttoolfactory.flavorsandserverdrivenui.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.smarttoolfactory.flavorsandserverdrivenui.MyApplication
+import com.smarttoolfactory.flavorsandserverdrivenui.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -47,9 +49,15 @@ class SplashFragment : Fragment() {
             .error(R.drawable.splash)
             .into(ivSplash)
 
+        val goToLogin = configManager.config?.features?.featureRequireLogin ?: false
+
         lifecycleScope.launch(Dispatchers.Main) {
             delay(2000)
-            findNavController().navigate(R.id.action_global_mainFragment)
+            if (goToLogin) {
+                findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
+            } else {
+                findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
+            }
         }
     }
 }

@@ -7,18 +7,44 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.smarttoolfactory.flavorsandserverdrivenui.SplashFragment"
+        android:name="com.smarttoolfactory.flavorsandserverdrivenui.ui.SplashFragment"
         android:label="SplashFragment"
-        tools:layout="@layout/fragment_splash"/>
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.smarttoolfactory.flavorsandserverdrivenui.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
-    <action
-        android:id="@+id/action_global_mainFragment"
-        app:destination="@id/mainFragment" />
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@color/login_background"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.smarttoolfactory.flavorsandserverdrivenui.ui.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@layout/fragment_main"
+            app:popUpToInclusive="true" />
+    </fragment>
 
 
 </navigation>
