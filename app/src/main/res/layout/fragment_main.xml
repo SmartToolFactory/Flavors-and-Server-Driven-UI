@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
-    android:id="@+id/containerMain"
+    android:id="@+id/containerMainRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background">
@@ -20,8 +20,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerContent"
         android:layout_width="match_parent"
+        android:background="#f00"
         android:layout_height="0dp"
-        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/containerBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,6 @@
         android:id="@+id/containerBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
