@@ -10,5 +10,6 @@
 
     <color name="background">#FFA000</color>
     <color name="splash_background">#03A9F4</color>
+    <color name="main_background">#BBDEFB</color>
     <color name="text_color">#FFFFFFFF</color>
 </resources>
