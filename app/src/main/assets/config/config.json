@@ -3,17 +3,17 @@
   "navigation_type": "1",
   "logo": "https://lh3.googleusercontent.com/MSfNBStW8HsKEntMerfgzf5COKuzYZMjiR21rvSQqVPkgk8z_uQArTD9iV0og1QkXfM",
   "colors": {
-    "colorPrimaryDark": "#212121",
-    "colorPrimary": "#424242",
-    "colorAccent": "#EC407A",
-    "splash_background": "#546E7A",
-    "login_background": "#455A64",
-    "text_color": "#FFFFFF",
-    "chats_background": "#757575",
-    "contacts_background": "#757575",
-    "calls_background": "#9E9E9E",
+    "colorPrimaryDark": "#232f34",
+    "colorPrimary": "#4a6572",
+    "colorAccent": "#f9aa33",
+    "splash_background": "#ffffff",
+    "login_background": "#ffffff",
+    "text_color": "#FF000000",
+    "chats_background": "#ffffff",
+    "contacts_background": "#ffffff",
+    "calls_background": "#ffffff",
     "nav_tab_icon_color": "#F5F5F5",
-    "nav_tab_icon_color_selected": "#EF6C00"
+    "nav_tab_icon_color_selected": "#f9aa33"
   },
   "features": {
     "feature_require_login": true,

@@ -27,7 +27,7 @@ class ConfigManager(private val context: Context) {
             val resource = context
                 .applicationContext
                 .assets
-                .readAssetsFile("config/config.json")
+                .readAssetsFile("config/config.json1")
 
             convertToObjectsFromString<Config>(resource)!!
         } catch (e: Exception) {

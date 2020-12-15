@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2196F3</color>
-    <color name="colorPrimaryDark">#1976D2</color>
-    <color name="colorAccent">#FF03DAC5</color>
+    <color name="colorPrimaryDark">#1565C0</color>
+    <color name="colorPrimary">#1E88E5</color>
+    <color name="colorAccent">#EC407A</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <!-- Flavor Specific Colors -->
-    <color name="background">#FFA000</color>
-    <color name="splash_background">#03A9F4</color>
-    <color name="login_background">#BBDEFB</color>
+    <color name="splash_background">#616161</color>
+    <color name="login_background">#455A64</color>
 
     <!-- Text Colors -->
-    <color name="text_color">#FFFFFFFF</color>
+    <color name="text_color">#FF000000</color>
+    <color name="input_background">#263238</color>
 
     <!-- BottomNavigation/Toolbar/Navigation View Colors -->
-    <color name="nav_tab_icon_color">#FFD54F</color>
-    <color name="nav_tab_icon_color_selected">#F5F5F5</color>
+    <color name="nav_tab_icon_color">#F5F5F5</color>
+    <color name="nav_tab_icon_color_selected">#EF6C00</color>
 
     <color name="chats_background">#757575</color>
-    <color name="contacts_background">#757575</color>
-    <color name="calls_background">#757575</color>
+    <color name="contacts_background">#9E9E9E</color>
+    <color name="calls_background">#BDBDBD</color>
 </resources>

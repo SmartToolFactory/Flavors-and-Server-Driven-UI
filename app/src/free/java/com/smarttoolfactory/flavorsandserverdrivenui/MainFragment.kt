@@ -5,9 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.android.material.transition.MaterialElevationScale
+import com.google.android.material.transition.MaterialSharedAxis
 import com.smarttoolfactory.flavorsandserverdrivenui.ui.screen.MainScreen
 
 class MainFragment : Fragment() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        exitTransition = MaterialElevationScale(false)
+            .apply {
+                duration = 500
+            }
+
+        reenterTransition = MaterialElevationScale(true)
+            .apply {
+                duration = 500
+            }
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
