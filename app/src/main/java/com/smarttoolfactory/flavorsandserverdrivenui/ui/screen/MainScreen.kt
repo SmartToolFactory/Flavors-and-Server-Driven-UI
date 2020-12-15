@@ -1,4 +1,4 @@
-package com.smarttoolfactory.flavorsandserverdrivenui.ui.sceen
+package com.smarttoolfactory.flavorsandserverdrivenui.ui.screen
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -32,6 +32,7 @@ class MainScreen(
 
     // Set idle and selected menu icon colors
     private val colorMap = MyApplication.configManager.colorMap
+
     private val navTabIconColorSelected =
         colorMap["navTabIconColorSelected"] ?: R.color.nav_tab_icon_color_selected
     private val navTabIconColorIdle =
@@ -42,7 +43,7 @@ class MainScreen(
         intArrayOf(android.R.attr.state_checked)
     )
 
-    private val colors = intArrayOf(
+    private val tabStateColors = intArrayOf(
         navTabIconColorIdle,
         navTabIconColorSelected
     )
@@ -157,8 +158,16 @@ class MainScreen(
 
         val tabLayout = appbarLayout.findViewById<TabLayout>(R.id.tabLayout)
 
-        if (tabNames.size > 1) {
+        val colorMap = MyApplication.configManager.colorMap
 
+        colorMap["colorPrimary"]?.let {
+            toolbar.setBackgroundColor(it)
+            tabLayout.setBackgroundColor(it)
+        }
+
+        tabLayout.setSelectedTabIndicatorColor(navTabIconColorSelected)
+
+        if (tabNames.size > 1) {
             // Bind tabs and viewpager
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                 tab.text = tabNames[position]
@@ -168,7 +177,6 @@ class MainScreen(
         } else {
             tabLayout.visibility = View.GONE
         }
-
     }
 
     private fun createBottomNavigation(
@@ -255,8 +263,9 @@ class MainScreen(
     }
 
     private fun setBottomNavigationViewIcons(bottomNavigationView: BottomNavigationView) {
-        val itemIconTintList = ColorStateList(states, colors)
+        val itemIconTintList = ColorStateList(states, tabStateColors)
         bottomNavigationView.itemIconTintList = itemIconTintList
+        bottomNavigationView.itemTextColor = itemIconTintList
     }
 
 }

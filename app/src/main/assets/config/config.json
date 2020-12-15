@@ -3,16 +3,16 @@
   "navigation_type": "1",
   "logo": "https://lh3.googleusercontent.com/MSfNBStW8HsKEntMerfgzf5COKuzYZMjiR21rvSQqVPkgk8z_uQArTD9iV0og1QkXfM",
   "colors": {
-    "colorPrimaryDark": "#6200EE",
-    "colorPrimary": "#3700B3",
+    "colorPrimaryDark": "#212121",
+    "colorPrimary": "#424242",
     "colorAccent": "#EC407A",
-    "splash_background": "#616161",
+    "splash_background": "#546E7A",
     "login_background": "#455A64",
     "text_color": "#FFFFFF",
-    "chats_background": "#4E342E",
-    "contacts_background": "#5D4037",
-    "calls_background": "#6D4C41",
-    "nav_tab_icon_color": "#FFD54F",
+    "chats_background": "#757575",
+    "contacts_background": "#757575",
+    "calls_background": "#9E9E9E",
+    "nav_tab_icon_color": "#F5F5F5",
     "nav_tab_icon_color_selected": "#EF6C00"
   },
   "features": {

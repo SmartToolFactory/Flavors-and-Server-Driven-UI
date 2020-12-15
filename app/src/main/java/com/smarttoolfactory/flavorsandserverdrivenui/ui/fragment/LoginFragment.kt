@@ -26,14 +26,14 @@ class LoginFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
-        colorMap["loginFragment"]?.let {
+        colorMap["loginBackground"]?.let {
             view.rootView.setBackgroundColor(it)
         }
 
         val ivLogin = view.findViewById<ImageView>(R.id.ivLogin)
 
         Glide.with(this)
-            .load(configManager.config?.logo)
+            .load(configManager.config.logo)
             .error(R.drawable.splash)
             .into(ivLogin)
 

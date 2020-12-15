@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.smarttoolfactory.flavorsandserverdrivenui.ui.sceen.MainScreen
+import com.smarttoolfactory.flavorsandserverdrivenui.ui.screen.MainScreen
 
 class MainFragment : Fragment() {
 

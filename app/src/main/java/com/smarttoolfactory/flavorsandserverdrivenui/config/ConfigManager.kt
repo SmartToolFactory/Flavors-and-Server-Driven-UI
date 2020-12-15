@@ -23,35 +23,23 @@ class ConfigManager(private val context: Context) {
 
     fun parseConfigFile() {
 
-        val resource = context
-            .applicationContext
-            .assets
-            .readAssetsFile("config/config.json")
+        config = try {
+            val resource = context
+                .applicationContext
+                .assets
+                .readAssetsFile("config/config.json")
 
-        config = convertToObjectsFromString<Config>(resource) ?: DEFAULT_CONFIG
-
-        config.colors.let {
-            parseColors(it)
+            convertToObjectsFromString<Config>(resource)!!
+        } catch (e: Exception) {
+            DEFAULT_CONFIG
         }
+
+        parseColors(config.colors)
     }
 
     // TODO Parse colors with Efficient way, this is temporary
     private fun parseColors(colors: Colors) {
         config.run {
-
-            /*
-                        "colorPrimaryDark": "#FF6200EE",
-                        "colorPrimary": "#FF3700B3",
-                        "colorAccent": "#FF03DAC5",
-                        "splash_background": "#9CCC65",
-                        "main_background": "#DCEDC8",
-                        "text_color": "FF000000",
-                        "chats_background": "#757575",
-                        "contacts_background": "#757575",
-                        "calls_background": "#757575",
-                        "nav_tab_icon_color": "#FFD54F",
-                        "nav_tab_icon_color_selected": "#F5F5F5"
-                 */
 
             colorMap["colorPrimaryDark"] = try {
                 colors.colorPrimaryDark.toColorInt()
@@ -70,7 +58,6 @@ class ConfigManager(private val context: Context) {
             } catch (e: Exception) {
                 ResourcesCompat.getColor(context.resources, R.color.colorAccent, null)
             }
-
 
             colorMap["splashBackground"] = try {
                 colors.splashBackground.toColorInt()
@@ -126,7 +113,6 @@ class ConfigManager(private val context: Context) {
         }
     }
 }
-
 
 inline fun <reified T> convertToObjectsFromString(input: String): T? {
     return Gson().fromJsonWithType<T>(input)
